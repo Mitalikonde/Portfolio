@@ -1,0 +1,524 @@
+/* Reset styles */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    background: #fff;
+    color: #080808;
+    font-family: 'Cambria', sans-serif;
+}
+
+/* Navigation styles */
+/* Navigation styles */
+/* Navigation styles */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff; /* White background */
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s, z-index 0.3s; /* Add z-index transition */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex; /* Display the list as a flex container */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 20px;
+    position: relative; /* Required for the pseudo-element */
+}
+
+nav ul li a {
+    color: #080808;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+/* Navbar link hover effect */
+nav ul li a:hover {
+    color: #000;
+    z-index: 200; /* Increase the z-index on hover */
+}
+
+/* Horizontal line effect on hover */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Height of the line */
+    background-color: #000; /* Color of the line */
+    transform: scaleX(0); /* Initial scale to hide the line */
+    transform-origin: right; /* Transform origin at the right end */
+    transition: transform 0.3s;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1); /* Scale to reveal the line on hover */
+    transform-origin: left; /* Change the transform origin to the left end */
+}
+
+/* Change background color on hover */
+nav:hover {
+    background: #f5f5f5; /* Light gray background when hovering over the whole navbar */
+}
+
+
+.header-text p{
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+
+
+/* Style the hidden navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    transition: top 0.3s;
+    /* Add your other navbar styles here */
+}
+
+/* Hide the hidden navbar */
+#navbar[style="top: -100px;"] {
+    top: -100px;
+}
+
+
+
+
+/* Header styles */
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text p {
+    color: #080808;
+    font-size: small;
+}
+
+/* About section styles */
+#about {
+    padding: 80px 0;
+    color: #080808;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    
+    flex-basis: 60%;
+    text-align: justify;
+    
+}
+
+.about-col-2 .btn{
+    font-family: Cambria ;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #080808;
+}
+
+.sub-title p{
+    text-align: start;
+}
+/* social icons start */
+.socials {
+	position: relative;
+	margin-top: 9rem;
+  }
+
+  .socials .social-icons {
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none
+  }
+
+  .socials .social-icons li {
+	display: inline-block;
+	margin-bottom: 14px
+  }
+
+  .social-icons a {
+	font-size: 20px;
+	display: inline-block;
+	line-height: 44px;
+	color: #080808;
+	/* background-color: #080808; */
+	width: 44px;
+    border-radius: 10px;
+	height: 44px;
+	text-align: center;
+	margin-right: 8px;
+	-webkit-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear
+  }
+
+  .social-icons a:active, .social-icons a:focus, .social-icons a:hover {
+	color: #fff;
+	background-color: #0685da
+  }
+
+  .social-icons a.github:hover {
+	background-color: #0e0e0e
+  }
+
+  .social-icons a.twitter:hover {
+	background-color: #00aced
+  }
+
+  
+
+  .social-icons a.linkedin:hover {
+	background-color: #007bb6
+  }
+
+
+  .social-icons a.behance:hover {
+	background-color: #070707
+  }
+
+  /* social icons end */
+/* Projects section styles */
+/* Projects section styles */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.project-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    width: calc(33.33% - 20px);
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.project-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.project-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.project-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* .project-list div:hover {
+    background: #6a6868;
+    transform: translateY(-10px);
+} */
+
+.project-list .figma:hover{
+    position: relative;
+    font-size: 50px;
+    color: #A259FF; /* Actual Color: Purple-Pink Gradient */
+    background: linear-gradient(135deg,#f24E1E, #FF7262,#A259FF, #0ACF83);
+    
+
+}
+
+.project-list .canva:hover{
+    position: relative;
+    font-size: 50px;
+    color: #00C4CC; /* Actual Color: Deep Blue */
+    background: linear-gradient(135deg, #01C3CC, #2A89DA, #7D2AE7);
+
+}
+
+.project-list .social:hover{
+    position: relative;
+    font-size: 50px;
+    color: #00C4CC; /* Actual Color: Deep Blue */
+    background: linear-gradient(135deg,#82a3b9, #e764dc, #406d82 );
+
+}
+.container {
+    padding: 5px 20%;
+    text-align: center;
+    /* position: fixed; */
+}
+
+/* Projects section styles */
+#projects {
+    padding-top: 120px; /* Add some top padding to create space for the fixed navbar */
+}
+
+
+
+/* Figma Logo
+.fa-brands .fa-figma {
+    color: #A259FF; /* Actual Color: Purple-Pink Gradient */
+    /* Add other styling properties for the Figma logo */
+/* }
+
+.fa-brands .fa-figma:hover {
+    color: #8D4DFF; /* Hover Effect: Slightly Darker Shade */
+    /* Add other hover styling properties for the Figma logo */
+/* }  */
+
+
+
+
+/* Social icons styles */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.social-icons ul {
+    list-style-type: none;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin-left: 250px;
+    display: flex;
+}
+
+.social-icons ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.social-icons ul li .fa {
+    color: black;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+
+.social-icons ul li .fa:hover {
+    color: #F9F9F9;
+}
+
+.social-icons ul li a {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #FDFCFC;
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+}
+
+.social-icons ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+
+.social-icons ul li:nth-child(1) a:hover {
+    background-color: #55acee;
+}
+
+.social-icons ul li:nth-child(2) a:hover {
+    background-color: #ff004f;
+}
+
+.social-icons ul li:nth-child(3) a:hover {
+    background-color: #6a6868;
+}
+
+.social-icons ul li:nth-child(4) a:hover {
+    background-color: #0e0e0e;
+}
+/* Styles for the Contact section */
+.contact {
+    text-align: center;
+    background-color: #000; /* Set the background color to black */
+    color: #fff; /* Set the text color to white */
+    padding: 50px 0; /* Add some padding for spacing */
+}
+
+.contact .heading {
+    margin-bottom: 20px;
+}
+
+.contact .row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact .row form {
+    margin: 20px;
+    padding: 20px;
+    width: 50%;
+    background: #000000;
+    color: #000;
+    text-transform: none;
+}
+
+.contact .row form .box {
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.contact .row form .box::placeholder {
+    text-transform: capitalize;
+}
+
+.contact .row form .message {
+    height: 80px;
+    resize: none;
+    width: 100%;
+}
+
+/* Styles for the Send button with the paper plane icon */
+.contact .row form .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    background-color: #fff;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact .row form .btn i {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.contact .row form .btn:hover {
+    background-color: #aad5ea;
+    color: #000;
+}
+
+/* Styles for the Footer */
+.footer {
+    text-align: center;
+    background-color: #fff; /* Set the background color to black */
+    color: #040404; /* Set the text color to white */
+    padding: 20px 0; /* Add some padding for spacing */
+}
+
+
+
+
+.top {
+    position: fixed;
+    bottom: .5rem;
+    right: 1rem;
+    z-index: 100;
+    display: none;
+}
+
+/* Media query for small screens */
+@media (max-width: 400px) {
+    .contact .row form {
+        margin: 3rem 0;
+    }
+}
+
+
+
+.resume {
+    padding:0px 40px 0px 20px;
+    color:black;
+    text-decoration: none;
+  }
+
+  .btn{
+	padding: 10px ;
+	background: #fff;
+	color: #080808;
+	cursor: pointer;
+	margin-top: 40px;
+	font-size: 20px;
+	border-radius: 6px;
+}
+
+.btn i{
+	padding: 0 .5rem;
+	font-size: 1.8rem;
+}
+
+.btn:hover{
+	background: #080808;
+    color: #fff;
+}
+  
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+footer i {
+    color: #ff004f;
+}
+
+.copyright {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
