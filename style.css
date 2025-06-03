@@ -1,6 +1,5 @@
 /* Reset styles */
 
-
 * {
     margin: 0;
     padding: 0;
@@ -522,3 +521,54 @@ footer i {
 }
 
 
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 30px;
+  border-left: 3px solid black;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+
+.timeline-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-left: 20px;
+}
+
+.role {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black;
+}
+
+.duration {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+  margin: 4px 0;
+}
+
+.company {
+  font-weight: 500;
+  color: #222;
+}
+
+.location {
+  font-size: 0.85rem;
+  color: #777;
+}
